@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./estilo.css">
+    <link rel="stylesheet" href="./usuarios.css">
+</head>
+
+<body>
+
+    <div class="login">
+        <img src="./fondo.png" alt="">
+        <h2>Login</h2>
+        <form action="">
+            <input type="text" id="usuario" placeholder="Usuario">
+            <input type="password" id="password" placeholder="Contraseña">
+            <label for="admin">Administrador</label>
+            <input type="checkbox" id="admin">
+            <button type="submit">Ingresar</button>
+        </form>
+    </div>
+
+    <div class="admin">
+
+        <div class="barra">
+            <img src="./fondo.png" alt="">
+            <button>Blockchain</button>
+            <button id="logo" onclick="SesionAdmin()"><img src="./login.png" alt=""></button>
+        </div>
+
+
+        <div class="main">
+            <div class="botones-cargar">
+                <button onclick="formPeliculas()">Cargar peliculas</button>
+                <button onclick="formClientes()">Cargar clientes</button>
+                <button onclick="formActores()">Cargar actores</button>
+                <button onclick="formCategorias()">Cargar categorias</button>
+            </div>
+            <div class="botones-graficos">
+                <button>Grafo peliculas</button>
+                <button>Grafo clientes</button>
+                <button>Grafo actores</button>
+                <button>Grafo categorias</button>
+            </div>
+
+            <!--Contenido de graficas y cargas de archivos-->
+            <div class="contenido">
+
+                <div class="form-peliculas">
+                    <h2>Cargar peliculas</h2>
+                    <form action="">
+                        <input type="file" id="file-1" required>
+                        <button type="submit">Cargar</button>
+                    </form>
+                </div>
+
+                <div class="form-clientes">
+                    <h2>Cargar clientes</h2>
+                    <form action="">
+                        <input type="file" id="file-2" required>
+                        <button type="submit">Cargar</button>
+                    </form>
+                </div>
+
+                <div class="form-actores">
+                    <h2>Cargar actores</h2>
+                    <form action="">
+                        <input type="file" id="file-3" required>
+                        <button type="submit">Cargar</button>
+                    </form>
+                </div>
+
+                <div class="form-categorias">
+                    <h2>Cargar categorias</h2>
+                    <form action="">
+                        <input type="file" id="file-4" required>
+                        <button type="submit">Cargar</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="usuario">
+        <div class="barra-usuario">
+            <img src="./fondo.png" alt="">
+            <div class="bienvenida">
+            </div>
+            <button onclick="SesionUSuario()"><img src="./nuevo.png" alt=""></button>
+        </div>
+
+
+        <!--Este div es toda la parte principal del usuario -->
+        <div class="principal-usuario">
+
+            <!--Este div contiene a las peliculas y su encabezado-->
+            <div class="mostrar-peliculas">
+                <p>MovieCats</p>
+
+                <!--Este div contiene el select y botones ver actores y ver categorias-->
+                <div class="botones">
+                    <select name="" id="ordenar">
+                        <option value="">Ninguno</option>
+                        <option value="As">Ascendente</option>
+                        <option value="Des">Descendente</option>
+                    </select>
+                    <div class="opciones">
+                        <button id="actors-vista" onclick="mostrarActores()">Ver actores</button>
+                        <button id="categories-vista" onclick="mostrarCategorias()">Ver categorias</button>
+                        <button id="carrito" onclick="mostrarCarro()">Carrito</button>
+                    </div>
+                </div>
+
+                <div class="info-pel">
+                    <button onclick="ocultarInfor()">X</button>
+                    <h2>Titulo</h2>
+                    <div class="popup-descrip">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolores aperiam eos
+                            voluptatem suscipit repudiandae consequatur error tempore dicta quo ratione officia sint
+                            laboriosam aspernatur, dignissimos, voluptas sapiente optio unde?
+                        </p>
+                    </div>
+                    <div class="puntaje">
+                        <button id="alquilar">Alquilar</button>
+                        <button id="modificar" onclick="modificarPunt()">Modificar</button>
+
+                        <div class="clasificacion">
+                            <input id="radio1" type="radio" name="estrellas" value="5">
+                            <label for="radio1">★</label>
+                            <input id="radio2" type="radio" name="estrellas" value="4">
+                            <label for="radio2">★</label>
+                            <input id="radio3" type="radio" name="estrellas" value="3">
+                            <label for="radio3">★</label>
+                            <input id="radio4" type="radio" name="estrellas" value="2">
+                            <label for="radio4">★</label>
+                            <input id="radio5" type="radio" name="estrellas" value="1">
+                            <label for="radio5">★</label>
+                        </div>
+                        <h2>Precio: 12123.6</h2>
+
+                    </div>
+                    <div class="comments">
+                        
+                    </div>
+                    <div class="publicar">
+                        <form action="">
+                            <input type="text" id="comentario" placeholder="Comentario">
+                            <button type="submit">Publicar</button>
+                        </form>
+                    </div>
+
+                </div>
+
+                <!--Este div es el que contiene a todas las peliculas-->
+                <div class="contenido-pel">
+
+                </div>
+
+            </div>
+
+            <div class="mostrar-actores">
+                <p>Actores</p>
+                <div class="botones">
+                    <select name="" id="recorrido">
+                        <option value="">Ninguno</option>
+                        <option value="pre">Pre orden</option>
+                        <option value="en">En orden</option>
+                        <option value="post">Post orden</option>
+                    </select>
+                    <div class="opciones">
+                        <button onclick="mostrarPeliculas()">Ver películas</button>
+                        <button onclick="mostrarCategorias()">Ver categorias</button>
+                        <button onclick="mostrarCarro()">Carrito</button>
+                    </div>
+                </div>
+
+                <div class="contenido-actores">
+                    <div class="actor">
+                        <span>Raul Castillo</span>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id quibusdam sit labore nulla nihil
+                            quos omnis atque, porro asperiores debitis a similique recusandae officia amet dolor, magnam
+                            corporis itaque cum.
+                            Harum ipsum, aspernatur eos quibusdam officiis iusto voluptas quam temporibus voluptatibus
+                            consequuntur repellat culpa saepe autem? Perspiciatis accusamus veniam consequuntur dolore
+                            in similique ipsa architecto fuga, aut aliquam sed quo?</p>
+
+                    </div>
+                    <div class="actor">
+
+                    </div>
+                    <div class="actor">
+
+                    </div>
+                    <div class="actor">
+
+                    </div>
+                    <div class="actor">
+
+                    </div>
+                    <div class="actor">
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mostrar-categorias">
+                <p>Categorias</p>
+                <div class="carro-botones">
+                    <button onclick="mostrarPeliculas()">Ver películas</button>
+                    <button onclick="mostrarCategorias()">Ver categorias</button>
+                    <button onclick="mostrarCarro()">Carrito</button>
+                </div>
+                <div class="contenido-categories">
+                    
+                </div>
+            </div>
+
+            <div class="carrito">
+                <p>Carrito</p>
+                <div class="carro-botones">
+                    <button onclick="mostrarPeliculas()">Ver películas</button>
+                    <button onclick="mostrarCategorias()">Ver categorias</button>
+                    <button onclick="mostrarActores()">Ver actores</button>
+                </div>
+
+                <div class="contenido-carrito">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="./Estructuras/clientes.js"></script>
+    <script src="./Estructuras/Avl.js"></script>
+    <script src="./Estructuras/TablaHash.js"></script>
+    <script src="./Estructuras/ArbolBinario.js"></script>
+    <script src="./logica.js"></script>
+</body>
+
+</html>

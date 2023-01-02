@@ -1,0 +1,524 @@
+.usuario {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*Esta es la barra del usuario */
+.usuario .barra-usuario {
+    height: 90px;
+    width: 100%;
+    background-color: rgb(52, 73, 94);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.usuario .barra-usuario img {
+    width: 90px;
+    height: 70px;
+}
+
+.usuario .barra-usuario>button {
+    background-color: transparent;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 10px;
+    border: none;
+}
+
+.usuario .barra-usuario> button img {
+    width: 40px;
+    height: 40px;
+}
+
+.usuario .barra-usuario .bienvenida{
+    width: 170px;
+    height: 60px;
+    background-color: cadetblue;
+    border-radius: 20px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*Aqui estara todo el contenido que vera el usuario*/
+.usuario .principal-usuario {
+    width: 100%;
+    height: calc(100% - 90px);
+    box-sizing: border-box;
+}
+
+/*Mostrar peliculas*/
+.usuario .principal-usuario .mostrar-peliculas {
+    display: flex;/*flex*/
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /*background-color: blueviolet;*/
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.usuario .principal-usuario .mostrar-peliculas>p {
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+    display: inline;
+    margin: 0;
+}
+
+.usuario .principal-usuario .botones {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    /*background-color: blue;*/
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.usuario .principal-usuario .botones select {
+    width: 150px;
+    height: 30px;
+}
+
+.usuario .principal-usuario .opciones button {
+    width: 140px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: lightseagreen;
+}
+
+.usuario .principal-usuario .contenido-pel {
+    width: 100%;
+    height: calc(100% - 104px);
+    box-sizing: border-box;
+    /*background-color: cadetblue;*/
+    overflow: auto;
+}
+
+
+/*Div de cada pelicula*/
+.usuario .principal-usuario .contenido-pel .peliculas {
+    display: flex;
+    width: 100%;
+    height: 240px;
+    background-color: rgb(229, 231, 233);
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.contenido-pel span {
+    display: none;
+}
+
+/*Configura el div que contiene la descripcion de cada pelicula*/
+.usuario .principal-usuario .contenido-pel .descripcion {
+    width: 45%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    font-size: 16px;
+}
+
+
+
+/*Cambia el tamaño de los botones dentro de cada pelicula*/
+.usuario .principal-usuario .contenido-pel .peliculas #information {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    background-image: url("./information.png");
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.usuario .principal-usuario .contenido-pel .peliculas #cart {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    background-image: url("./shoppin.jpg");
+    background-size: 45px 35px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/*Configura los tamaños de las imagenes de los botones*/
+.usuario .peliculas .information img{
+    width: 35px;
+    height: 35px;
+}
+
+.usuario .peliculas .cart img{
+    width: 45px;
+    height: 40px;
+}
+
+.usuario .info-pel {
+    display: none;
+    width: 70%;
+    height: 470px;
+    background-color: rgb(247, 220, 111);
+    position: absolute;
+    top: 95px;
+    border-radius: 20px;
+    font-family: sans-serif;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    overflow: auto;
+
+}
+
+.usuario .info-pel>button {
+    font-size: 20px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background: transparent;
+    border-radius: 20px;
+}
+
+.usuario .info-pel h2 {
+    display: inline;
+}
+
+
+.usuario .info-pel>button:hover {
+    cursor: pointer;
+}
+
+.usuario .info-pel .popup-descrip {
+    width: 100%;
+    min-height: 140px;
+    /*background-color: brown;*/
+    margin-top: 10px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+
+}
+
+
+.usuario .info-pel .puntaje {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /*background-color: chartreuse;*/
+}
+
+.usuario .info-pel .puntaje>button {
+    width: 110px;
+    height: 40px;
+}
+
+
+
+
+/*-----Esta parte estiliza las estrellas-----*/
+.usuario .puntaje input[type="radio"] {
+    display: none;
+}
+
+
+
+.usuario .puntaje label {
+    color: grey;
+    font-size: 30px;
+}
+
+.usuario .puntaje .clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    display: inline;
+}
+
+.usuario .puntaje label:hover,
+.usuario .puntaje label:hover~label {
+    color: orange;
+}
+
+.usuario .puntaje input[type="radio"]:checked~label {
+    color: orange;
+}
+
+
+/*Esto estiliza el div de los comentarios*/
+
+.usuario .info-pel .comments {
+    width: 100%;
+    min-height: 30px;
+    background-color: darkgoldenrod;
+    padding: 7px;
+    box-sizing: border-box;
+    margin-top: 10px;
+
+}
+
+.usuario .info-pel .comments>p {
+    border: 3px solid gray;
+    min-height: 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+.usuario .info-pel .publicar {
+    width: 100%;
+    height: 110px;
+    /*background-color: deeppink;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.usuario .info-pel .publicar input{
+    width: 400px;
+    height: 25px;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.usuario .info-pel .publicar button {
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: lightseagreen;
+    border: none;
+}
+
+/*-------------------Contenedor que muestra los actores-----------------------*/
+
+.usuario .mostrar-actores {
+    display: none;
+    width: 100%;
+    height: 100%;
+    /*background-color: blue;*/
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.usuario .mostrar-actores> button {
+    width: 140px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    border-radius: 20px;
+}
+
+.usuario .principal-usuario .mostrar-actores>p {
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+    display: inline;
+}
+
+.usuario .principal-usuario .mostrar-actores .seleccionar {
+    width: 190px;
+    height: 60px;
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 60px;
+}
+
+.usuario .principal-usuario .mostrar-actores select {
+    width: 130px;
+    height: 30px;
+    border: none;
+}
+
+.usuario .principal-usuario .mostrar-actores .contenido-actores {
+    width: 100%;
+    height: calc(100% - 105px);
+    padding-top: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    box-sizing: border-box;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.usuario .principal-usuario .mostrar-actores .actor {
+    width: 530px;
+    /*background-color: chartreuse;*/
+    height: 380px;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35) ;
+    text-align: justify;
+}
+
+.mostrar-actores .actor span {
+    font-family: sans-serif;
+    font-size: 18pt;
+    font-weight: bold;
+    
+}
+
+
+.mostrar-actores .actor>p {
+    font-size: 14pt;
+    font-family: sans-serif;
+}
+
+
+/*------------------------------------------Contenedor Carrito-------------------------------*/
+.usuario .carrito {
+    display: none;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center; 
+}
+
+.usuario .carrito>p {
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+    display: inline;
+    
+}
+
+.usuario .carrito .contenido-carrito {
+    width: 100%;
+    height: calc(100% - 105px);
+    padding-top: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    box-sizing: border-box;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.usuario .carrito .contenido-carrito .product {
+    width: 280px;
+    height: 300px;
+    border-radius: 20px;
+    margin: 5px;
+    font-family: sans-serif;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35) ;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.usuario .principal-usuario .carro-botones {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+    /*background-color: blue;*/
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.usuario .principal-usuario .carro-botones button {
+    width: 140px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: lightseagreen;
+}
+
+
+/*---------------------Mostrar categorias----------------*/
+
+.usuario .mostrar-categorias {
+    display: none;
+    width: 100%;
+    height: 100%;
+    /*background-color: blue;*/
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+.usuario .mostrar-categorias>p {
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+    display: inline;
+}
+
+.usuario .mostrar-categorias .contenido-categories {
+    width: 100%;
+    height: calc(100% - 105px);
+    padding-top: 30px;
+    padding-left: 100px;
+    padding-right: 100px;   
+    box-sizing: border-box;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.usuario .mostrar-categorias .contenido-categories .categoria {
+    width: 320px;
+    height: 210px;
+    /*background-color: black;*/
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35) ;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+}

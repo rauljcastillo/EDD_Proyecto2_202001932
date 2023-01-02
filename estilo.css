@@ -1,0 +1,319 @@
+/*Este css es para la parte de login y admin*/
+
+body {
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+.login {
+    display: block;
+    background-image: url("./fondo-p.jpg");
+    width: 300px;
+    height: 360px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.login img {
+    width: 120px;
+    height: 100px;
+    position: absolute;
+    left: calc(50% - 60px);
+    top: -54px;
+}
+
+.login h2 {
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+    font-family: sans-serif;
+}
+.login input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 35px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid white;
+    font-size: 16px;
+    color: white;
+}
+
+.login label {
+    font-size: 17px;
+    font-weight: bold;
+    display: inline;
+    font-family: sans-serif;
+    color: white;
+
+}
+
+.login input[type="checkbox"] {
+    position: absolute;
+    left: 180px;
+    top: 240px;
+    display: inline;
+    width: 25px;
+}
+
+
+.login button {
+    margin-top: 43px;
+    width: 100%;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: rgb(192, 57, 43);
+    color: white;
+}
+
+/*Aqui empieza el estilo para admin*/
+
+.admin {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.admin .barra {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(133, 193, 233);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.admin .barra>img {
+    width: 90px;
+    height: 70px;
+}
+
+.admin .barra #logo {
+    background-color: transparent;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 10px;
+    border: none;
+}
+
+.admin .barra #logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.admin .barra button {
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(93, 109, 126 );
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.admin .main {
+    height: calc(100% - 80px);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+/*Div que muestra los botones para cargas masivas */
+.admin .main .botones-cargar {
+    height: 70px;
+    width: 70%;
+    /*background-color: blueviolet;*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+}
+
+.admin .main .botones-cargar button {
+    width: 130px;
+    height: 50px;
+}
+
+
+/*Div que muetra los botones de graficos */
+.admin .main .botones-graficos {
+    width: 190px;
+    /*background-color: blue;*/
+    height: calc(100% - 100px);
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    left: 60px;
+
+}
+
+.admin .main .botones-graficos button {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(98, 101, 103);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    
+    
+}
+
+
+/*Div contenido*/
+
+.admin .main .contenido {
+    width: 60%;
+    background-color: rgb(169, 223, 191);
+    height: 390px;
+    position: absolute;
+    left: 300px;
+    top: 170px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+
+.admin .main .contenido .form-peliculas {
+    width: 50%;
+    height: 300px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.admin .contenido .form-peliculas h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: sans-serif;
+
+}
+
+.admin .contenido .form-peliculas button {
+    width: 100%;
+    margin-top: 30px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: chartreuse;
+}
+
+
+/*------------------------*/
+.admin .main .contenido .form-clientes {
+    display: none;
+    width: 50%;
+    height: 300px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.admin .contenido .form-clientes h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: sans-serif;
+    
+}
+
+.admin .contenido .form-clientes button {
+    width: 100%;
+    margin-top: 30px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: chartreuse;
+}
+
+
+/*------------------*/
+.admin .main .contenido .form-actores {
+    display: none;
+    width: 50%;
+    height: 300px;
+    padding: 10px;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.admin .contenido .form-actores h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: sans-serif;
+    
+}
+
+.admin .contenido .form-actores button {
+    width: 100%;
+    margin-top: 30px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: chartreuse;
+}
+
+
+/*----------------*/
+.admin .main .contenido .form-categorias {
+    display: none;
+    width: 50%;
+    height: 300px;
+    padding: 10px;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.admin .contenido .form-categorias h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: sans-serif;
+    
+}
+
+.admin .contenido .form-categorias button {
+    width: 100%;
+    margin-top: 30px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: chartreuse;
+}
